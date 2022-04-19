@@ -1,12 +1,12 @@
 import * as S from './styles'
 
 export type RibbonColors = 'primary' | 'secondary'
-export type RibbonZises = 'normal' | 'small'
+export type RibbonSizes = 'normal' | 'small'
 
 export type RibbonProps = {
   children: React.ReactNode
   color?: RibbonColors
-  size?: RibbonZises
+  size?: RibbonSizes
 }
 
 const Ribbon = ({
