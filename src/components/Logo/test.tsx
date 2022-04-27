@@ -4,7 +4,7 @@ import { renderWithTheme } from '../../../utils/tests/helpers'
 
 describe('<Logo />', () => {
   it('should render a white label by default', () => {
-    renderWithTheme(<Logo />)
+    renderWithTheme(<Logo id="myId" />)
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
       color: '#FAFAFA'
     })
