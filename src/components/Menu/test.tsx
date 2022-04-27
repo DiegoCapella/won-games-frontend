@@ -19,6 +19,5 @@ describe('<Menu />', () => {
     expect(screen.queryByText(/my profile/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/wishlist/i)).not.toBeInTheDocument()
     expect(screen.getByText(/sign up/i)).toBeInTheDocument()
-    expect(screen.getAllByText(/sign in/i)).toHaveLength(1)
   })
 })
