@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
+
 import Button from 'components/Button'
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
 import {
@@ -40,7 +42,7 @@ const GameCard = ({
       </Ribbon>
     )}
     <S.ImageBox>
-      <img src={img} alt={title} />
+      <Image src={img} alt={title} layout="fill" objectFit="cover" />
     </S.ImageBox>
     <S.Content>
       <S.Info>
