@@ -5,7 +5,7 @@ import Slider from '.'
 
 describe('<Slider />', () => {
   it('should render the heading', () => {
-    const { container } = render(
+    render(
       <Slider settings={{ slidesToShow: 2, infinite: false }}>
         <p>Item 1</p>
         <p>Item 2</p>
@@ -19,7 +19,5 @@ describe('<Slider />', () => {
     expect(
       screen.getByText(/item 2/i).parentElement?.parentElement
     ).toHaveClass('slick-slide')
-
-    expect(container.firstChild).toMatchSnapshot()
   })
 })
