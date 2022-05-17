@@ -1,27 +1,25 @@
 import Image from 'next/image'
 
 import Gallery, { GalleryImageProps } from 'components/Gallery'
-import { GameCardProps } from 'components/GameCard'
 import GameDetails, { GameDetailsProps } from 'components/GameDetails'
 import GameInfo, { GameInfoProps } from 'components/GameInfo'
+import { GameCardProps } from 'components/GameCard'
 import { HighlightProps } from 'components/Highlight'
-import Base from 'templates/Base'
-
-import * as S from './styles'
+import { Divider } from 'components/Divider'
 import TextContent from 'components/TextContent'
 import Showcase from 'components/Showcase'
 
+import Base from 'templates/Base'
+import * as S from './styles'
+
 export type GameTemplateProps = {
-  // slug?: string
   cover: string
   gameInfo: GameInfoProps
   gallery?: GalleryImageProps[]
   description: string
   details: GameDetailsProps
-  // upcomingTitle: string
   upcomingGames: GameCardProps[]
   upcomingHighlight: HighlightProps
-  // recommendedTitle: string
   recommendedGames: GameCardProps[]
 }
 
@@ -31,10 +29,8 @@ const Game = ({
   gallery,
   description,
   details,
-  // upcomingTitle,
   upcomingGames,
   upcomingHighlight,
-  // recommendedTitle,
   recommendedGames
 }: GameTemplateProps) => (
   <Base>
@@ -57,20 +53,16 @@ const Game = ({
 
       <S.SectionGameDetails>
         <GameDetails {...details} />
+        <Divider />
       </S.SectionGameDetails>
 
       <Showcase
-        // title={upcomingTitle}
         title="Upcoming"
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
 
-      <Showcase
-        // title={recommendedTitle}
-        title="You may like these games"
-        games={recommendedGames}
-      />
+      <Showcase title="You may like these games" games={recommendedGames} />
     </S.Main>
   </Base>
 )
