@@ -7,7 +7,7 @@ export type CardsListProps = {
   cards?: PaymentCard[]
 }
 
-const CardList = ({ cards }: CardsListProps) => (
+const CardsList = ({ cards }: CardsListProps) => (
   <>
     <Heading lineBottom color="black" size="small">
       My cards
@@ -22,4 +22,4 @@ const CardList = ({ cards }: CardsListProps) => (
   </>
 )
 
-export default CardList
+export default CardsList
